@@ -1,0 +1,43 @@
+<mxfile host="65bd71144e">
+    <diagram id="IvvNNoJCShqxipPMvAnU" name="services">
+        <mxGraphModel dx="1100" dy="562" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="bop0lnDdao5h9kGqFnou-1" value="Product" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="240" y="240" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="bop0lnDdao5h9kGqFnou-2" value="Store" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="240" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="bop0lnDdao5h9kGqFnou-3" value="Customer" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="360" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="bop0lnDdao5h9kGqFnou-4" value="Warehouse" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="440" y="240" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="Order" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="480" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="Notification" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="120" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="Account" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="40" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="IAM" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="240" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="Payment" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="240" y="480" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="Shipment" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="440" y="480" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="Loyalty" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="240" y="360" width="120" height="60" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
