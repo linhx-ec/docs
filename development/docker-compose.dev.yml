@@ -1,0 +1,52 @@
+version: "3.8"
+
+services:
+  mongo:
+    build: ./db
+    hostname: mongo
+    container_name: ec-mongo-dev
+    volumes:
+      - ./db/data:/data/db
+      - ./db/init/init.sh:/scripts/init.sh
+    command: --bind_ip_all --replSet rs0 --keyFile /data/db.key
+    ports:
+      - 27017:27017
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: root
+      MONGO_REPLICA_SET_NAME: rs0
+    networks:
+      - network
+  
+  zookeeper:
+    image: 'bitnami/zookeeper:latest'
+    tmpfs: "/datalog"
+    ports:
+      - '2181:2181'
+    environment:
+      - ALLOW_ANONYMOUS_LOGIN=yes
+    networks:
+      - network
+  kafka:
+    image: 'bitnami/kafka:latest'
+    restart: 'always'
+    ports:
+      - '9092:9092'
+    environment:
+      - KAFKA_BROKER_ID=1
+      - KAFKA_CFG_LISTENERS=PLAINTEXT://:9092
+      - KAFKA_CFG_ADVERTISED_LISTENERS=PLAINTEXT://127.0.0.1:9092
+      - KAFKA_CFG_ZOOKEEPER_CONNECT=zookeeper:2181
+      - ALLOW_PLAINTEXT_LISTENER=yes
+    depends_on:
+      - zookeeper
+    networks:
+      - network
+    volumes:
+      - ./docker-data/kafka/data:/var/lib/kafka/data
+      - ./docker-data/kafka/secrets:/etc/kafka/secrets
+
+networks:
+  network:
+    name: ec_network
+    driver: bridge
